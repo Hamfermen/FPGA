@@ -1,7 +1,7 @@
 `timescale 1ns/100ps // 1 ns time unit, 100 ps resolution
 // `include "task_1.v"
 
-module task_3_tb;
+module task_4_tb;
 	
 	reg a, clock;
 
@@ -28,8 +28,8 @@ module task_3_tb;
 
 	 initial 
 	begin
-		$dumpfile ("task_3.vcd");
-		$dumpvars(0, task_3_tb);
+		$dumpfile ("task_4.vcd");
+		$dumpvars(0, task_4_tb);
 	end
 
 	always

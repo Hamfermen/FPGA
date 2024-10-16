@@ -2,7 +2,7 @@
 // `include "task_1.v"
 
 module task_2_tb;
-	wire a=0, b=0, c=0, d=0;
+	reg a=0, b=0, c=0, d=0;
 
     wire q;
 
