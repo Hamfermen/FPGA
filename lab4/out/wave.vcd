@@ -1,0 +1,206 @@
+$date
+	Fri Oct 18 19:20:36 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module task_1_tb $end
+$var event 1 ! third $end
+$var event 1 " second $end
+$var wire 4 # q [3:0] $end
+$var reg 4 $ a [3:0] $end
+$var reg 4 % b [3:0] $end
+$var reg 4 & c [3:0] $end
+$var reg 4 ' d [3:0] $end
+$var reg 4 ( e [3:0] $end
+$scope module tsk0 $end
+$var wire 4 ) a [3:0] $end
+$var wire 4 * b [3:0] $end
+$var wire 4 + c [3:0] $end
+$var wire 4 , d [3:0] $end
+$var wire 4 - e [3:0] $end
+$var reg 4 . q [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1011 .
+b1110 -
+b1101 ,
+b0 +
+b1011 *
+b1010 )
+b1110 (
+b1101 '
+b0 &
+b1011 %
+b1010 $
+b1011 #
+1"
+1!
+$end
+#50
+b1110 #
+b1110 .
+b1 &
+b1 +
+#100
+b1010 #
+b1010 .
+b10 &
+b10 +
+#150
+b1101 #
+b1101 .
+b11 &
+b11 +
+#200
+b1111 #
+b1111 .
+b100 &
+b100 +
+#250
+b101 &
+b101 +
+#300
+b110 &
+b110 +
+#350
+b111 &
+b111 +
+#400
+b1000 &
+b1000 +
+#450
+b1001 &
+b1001 +
+#500
+b1010 &
+b1010 +
+#550
+b1011 &
+b1011 +
+#600
+b1100 &
+b1100 +
+#650
+b1101 &
+b1101 +
+#700
+b1110 &
+b1110 +
+#750
+b1111 &
+b1111 +
+#800
+b1011 #
+b1011 .
+b0 &
+b0 +
+#850
+b1110 #
+b1110 .
+b1 &
+b1 +
+#900
+b1010 #
+b1010 .
+b10 &
+b10 +
+#950
+b10 #
+b10 .
+b0 &
+b0 +
+b100 (
+b100 -
+b11 '
+b11 ,
+b10 %
+b10 *
+b1 $
+b1 )
+1"
+#1000
+b100 #
+b100 .
+b1 &
+b1 +
+#1050
+b1 #
+b1 .
+b10 &
+b10 +
+#1100
+b11 #
+b11 .
+b11 &
+b11 +
+#1150
+b1111 #
+b1111 .
+b100 &
+b100 +
+#1200
+b101 &
+b101 +
+#1250
+b110 &
+b110 +
+#1300
+b111 &
+b111 +
+#1350
+b1000 &
+b1000 +
+#1400
+b110 #
+b110 .
+b0 &
+b0 +
+b1000 (
+b1000 -
+b111 '
+b111 ,
+b110 %
+b110 *
+b101 $
+b101 )
+1!
+#1450
+b1000 #
+b1000 .
+b1 &
+b1 +
+#1500
+b101 #
+b101 .
+b10 &
+b10 +
+#1550
+b111 #
+b111 .
+b11 &
+b11 +
+#1600
+b1111 #
+b1111 .
+b100 &
+b100 +
+#1650
+b101 &
+b101 +
+#1700
+b110 &
+b110 +
+#1750
+b111 &
+b111 +
+#1810
