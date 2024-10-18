@@ -20,10 +20,13 @@ module task_1_tb;
 	$display ("###################################################");
 	$display ("Start TestBench");
 	clk = 0;
-	reset <= 1;
+	reset = 0;
 	end
 
-	 initial 
+	event reset_done;
+	event reset_enable;
+
+	initial 
 	begin
 		$dumpfile ("wave.vcd");
 		$dumpvars(0, task_1_tb);
@@ -34,21 +37,20 @@ module task_1_tb;
 
 	initial begin
 
-		#5
+		#10->reset_enable;
+		@(reset_done);
+		@ (posedge clk);
 
-		reset <= 0;
-
-		repeat (2004)
+		repeat (999)
 		begin
-			#5;
+			@(posedge clk);
 		end
 
-		reset <= 1;
-	
-		#10
-		reset <= 0;
-		#20
+		#10 ->reset_enable;
+		@(reset_done);
+		@ (posedge clk);
 
+		#10
 		$display ("###################################################");
 		$finish();
 	end
@@ -56,4 +58,16 @@ module task_1_tb;
 	initial begin
 		$monitor("t=%-4d: clk = %h, reset = %h, q = %d", $time, clk, reset, q);
 	end
+
+	initial forever begin				
+	@ (reset_enable);
+	@ (posedge clk)			
+	$display ("Applying reset");
+	reset <= 1;				
+	@ (posedge clk)			
+	reset <= 0;				
+	$display ("Came out of Reset");
+	-> reset_done;			
+	end
+
 endmodule

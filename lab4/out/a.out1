@@ -1,4 +1,9 @@
-**** module/scope: task_1
+**** module/scope: task_1_tb
+     Flip-Flops   : 0
+     Logic Gates  : 0
+     LOG[13]: 1 unaccounted
+     LOG[14]: 1 unaccounted
+**** module/scope: task_1_tb.tsk0
      Flip-Flops   : 10
      Logic Gates  : 80
      ADDER[10]: 1 units
@@ -12,5 +17,5 @@
      ADDER[10]: 1 units
      EQUALITY[10]: 1 units
      MUX[2]: 20 slices
-     LOG[13]: 1 unaccounted
-     LOG[14]: 1 unaccounted
+     LOG[13]: 2 unaccounted
+     LOG[14]: 2 unaccounted
