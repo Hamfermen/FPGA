@@ -3,17 +3,14 @@
 
 module task_1_tb;
 	
-	reg[3:0] a, b, c, d, e;
+	reg clk, reset;
 
-    wire[3:0] q;
+    wire[9:0] q;
 
 	task_1 tsk0
 	(
-		.a(a),
-        .b(b),
-        .c(c),
-        .d(d),
-		.e(e),
+		.clk(clk),
+        .reset(reset),
 		.q(q)
 	);
 
@@ -22,6 +19,8 @@ module task_1_tb;
 	begin
 	$display ("###################################################");
 	$display ("Start TestBench");
+	clk = 0;
+	reset <= 1;
 	end
 
 	 initial 
@@ -30,61 +29,31 @@ module task_1_tb;
 		$dumpvars(0, task_1_tb);
 	end
 
-	event second;
-	event third;
+	always
+		#5 clk = !clk;
 
 	initial begin
 
-		a = 'ha; 
-		b = 'hb; 
-		d = 'hd; 
-		e = 'he; 
-		c ='h0;
+		#5
 
-		repeat (18)
+		reset <= 0;
+
+		repeat (2004)
 		begin
-			#5 c = (c+'h1);
+			#5;
 		end
+
+		reset <= 1;
 	
-		#5 -> second;
-	end
+		#10
+		reset <= 0;
+		#20
 
-	initial begin
-		@(second);
-		a = 'h1; 
-		b = 'h2; 
-		d = 'h3; 
-		e = 'h4; 
-		c ='h0;
-
-		repeat (8)
-		begin
-			#5 c = (c+'h1);
-		end
-	
-		#5 -> third;
-	end
-
-	initial begin
-		@(third);
-		a = 'h5; 
-		b = 'h6; 
-		d = 'h7; 
-		e = 'h8; 
-		c ='h0;
-
-		repeat (7)
-		begin
-			#5 c = (c+'h1);
-		end
-		
-		#5 
 		$display ("###################################################");
-		#1 
 		$finish();
 	end
 
 	initial begin
-		$monitor("t=%-4d: a = %h, b = %h, c = %h, d = %h, e = %h, q = %h", $time, a, b, c, d, e, q);
+		$monitor("t=%-4d: clk = %h, reset = %h, q = %d", $time, clk, reset, q);
 	end
 endmodule

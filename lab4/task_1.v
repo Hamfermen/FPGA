@@ -1,18 +1,16 @@
 
 
 module task_1(
-	input[3:0] a, b, c, d, e,
-    output reg[3:0] q );
+	input clk, reset,
+    output reg[9:0] q);
 
-always @(c) begin
-case(c)
-        4'h0: q <= b;
-        4'h1: q <= e;
-        4'h2: q <= a;
-        4'h3: q <= d;
-
-        default: q <= 'hf;
-endcase
+always @(posedge clk) begin
+    if (reset) begin
+            q <= 10'd0;
+    end
+    else begin
+        q <= (q==10'd999) ? 0:q+1;
+    end
 end
 
 endmodule
