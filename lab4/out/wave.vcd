@@ -1,5 +1,5 @@
 $date
-	Fri Oct 18 22:51:13 2024
+	Fri Oct 18 23:35:09 2024
 $end
 $version
 	Icarus Verilog
@@ -8,130 +8,143 @@ $timescale
 	100ps
 $end
 $scope module task_2_tb $end
-$var wire 1 ! start_shifting $end
+$var wire 4 ! q [3:0] $end
 $var reg 1 " clk $end
-$var reg 1 # data $end
-$var reg 1 $ reset $end
+$var reg 1 # count_ena $end
+$var reg 1 $ data $end
+$var reg 1 % shift_ena $end
 $scope module tsk0 $end
 $var wire 1 " clk $end
-$var wire 1 # data $end
-$var wire 1 $ reset $end
-$var parameter 32 % s0 $end
-$var parameter 32 & s1 $end
-$var parameter 32 ' s2 $end
-$var parameter 32 ( s3 $end
-$var reg 2 ) n_st [1:0] $end
-$var reg 2 * st [1:0] $end
-$var reg 1 ! start_shifting $end
+$var wire 1 # count_ena $end
+$var wire 1 $ data $end
+$var wire 1 % shift_ena $end
+$var reg 4 & q [3:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 $comment Show the parameter values. $end
 $dumpall
-b11 (
-b10 '
-b1 &
-b0 %
 $end
 #0
 $dumpvars
-bx *
-bx )
-1$
+bx &
+1%
+0$
 0#
 0"
-x!
+bx !
 $end
 #50
-0!
-0$
-b0 )
-b0 *
+bx0 !
+bx0 &
 1"
 #100
 0"
 #150
-1#
+bx00 !
+bx00 &
 1"
 #200
 0"
 #250
-0#
-b1 )
+bx000 !
+bx000 &
 1"
 #300
 0"
 #350
-1#
-b0 )
-b1 *
+x$
+0%
+b0 !
+b0 &
 1"
 #400
 0"
 #450
-b1 )
-b0 *
 1"
 #500
 0"
 #550
-b10 )
-b1 *
+1$
+1%
 1"
 #600
 0"
 #650
-b10 *
+b1 !
+b1 &
+0$
 1"
 #700
 0"
 #750
+b10 !
+b10 &
 1"
 #800
 0"
 #850
-0#
+b100 !
+b100 &
+1$
 1"
 #900
 0"
 #950
-1#
-b11 )
+x$
+0%
+b1001 !
+b1001 &
 1"
 #1000
 0"
 #1050
-1!
-b0 )
-b11 *
 1"
 #1100
 0"
 #1150
-0#
-b1 )
-b0 *
 1"
 #1200
 0"
 #1250
-b0 )
-b1 *
+1#
 1"
 #1300
 0"
 #1350
-1$
-1#
-b0 *
+b1000 !
+b1000 &
 1"
 #1400
 0"
 #1450
-0!
-b1 )
+b111 !
+b111 &
 1"
 #1500
 0"
 #1550
+b110 !
+b110 &
+1"
+#1600
+0"
+#1650
+b101 !
+b101 &
+1"
+#1700
+0"
+#1750
+0#
+b100 !
+b100 &
+1"
+#1800
+0"
+#1850
+1"
+#1900
+0"
+#1950
 1"
