@@ -5,7 +5,7 @@ module task_1_tb;
 	
 	reg clk, reset;
 
-    wire[9:0] q;
+    wire[15:0] q;
 
 	task_1 tsk0
 	(
